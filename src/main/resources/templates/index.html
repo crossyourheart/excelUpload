@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<!-- 需要添加
+<html  xmlns:th="http://www.thymeleaf.org">
+这样在后面的th标签就不会报错
+ -->
+<html  xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title th:text="${username}">xx</title>
+</head>
+<body>
+
+
+<h1>表单提交  上传一个excel   </h1>
+<h2>Demo   在项目resouces 目录下</h2>
+<!-- 表单提交用户信息,注意字段的设置,直接是*{} -->
+<form action="#" th:action="@{/upload}" enctype="multipart/form-data" method="post">
+    <input type="file" name="file" value="文件上传" />
+    <input type="submit" />
+</form>
+</body>
+</html>
